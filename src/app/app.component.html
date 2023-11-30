@@ -1,0 +1,11 @@
+
+    <header>
+      <h1 className="texto" class="display-4">Bem Vindos a Agenda de Contatos</h1>
+    </header>
+
+
+<button type="button" class="btn btn-secondary btn-sm" (click)="adicionarComponente() " > Adicionar Contatos</button>
+
+<ng-container *ngIf="mostrarComponente">
+  <app-adicionar-contatos></app-adicionar-contatos>
+</ng-container>

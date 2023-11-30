@@ -1,0 +1,31 @@
+
+<div>
+  <h2>Adicionar Contato</h2>
+  <form [formGroup]="contatosForm"(submit)="onSubmit()">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" formControlName="nome" required>
+
+    <label for="celular">Número de Telefone:</label>
+    <input type="text" id="celular" name="celular" formControlName="celular" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" formControlName="email" required>
+
+    <label for="favorito">Favorito:</label>
+    <input type="checkbox" id="favorito" name="favorito" formControlName="favorito">
+
+    <button type="submit">Adicionar Contato</button>
+  </form>
+</div>
+<div *ngIf="novoContato">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ novoContato.nome }}</mat-card-title>
+      <mat-card-subtitle>{{ novoContato.email }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Celular: {{ novoContato.celular }}</p>
+      <p>Favorito: {{ novoContato.favorito ? 'Sim' : 'Não' }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

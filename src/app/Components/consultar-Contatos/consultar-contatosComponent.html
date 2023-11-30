@@ -1,0 +1,7 @@
+<h2>Consultar Contatos</h2>
+
+<ul>
+  <li *ngFor="let contatos of contatos">
+    {{ contatos.nome }} - {{ contatos.celular }} - {{ contatos.email }} - {{ contatos.favorito ? 'Favorito' : 'Não Favorito' }}
+  </li>
+</ul>
